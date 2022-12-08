@@ -28,12 +28,16 @@
                 <div class="flex items-center justify-center mb-4">
                     <img src="/assets/img/logo-ir.svg" class="h-32" />
                 </div>
-                <p class="text-grey-700 justify-center">Register in iReview</p>
+                <p class="text-grey-700 text-center my-5">Register in iReview</p>
 
                 <label>
-                  <a href="login.html" class="text-blue-700" class="py-4">Already has account?</a></p>
+                  <a href="login.html" class="text-blue-700 py-4 my-4 text-center">Already has account?</a></p>
                 </label>
-
+                <fieldset>
+                  <input id="draft" class="peer/draft" type="radio" name="status" />
+                  <label for="draft" class="peer-checked/draft:text-blue-700">Business owner</label>
+                
+                </fieldset>
 
                 <label class="text-grey-700">Username</label>
                 <input
@@ -61,6 +65,16 @@
                 type="checkbox"
                 />
                 <label for="remember" class="text-grey-700">Remember Me</label>
+                
+                <br>
+                <input
+                class="mb-6"
+                id="remember"
+                type="checkbox"
+                />
+                <label for="remember" class="text-grey-700">Agree to <a href="terms.html" class="text-blue-700">terms and conditions</a></label>
+                
+
                 <button 
                 type="submit" 
                 class="bg-blue-500 w-full
