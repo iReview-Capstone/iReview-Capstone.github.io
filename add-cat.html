@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth;">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--====== Favicon Icon ======-->
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/png">
+    <!-- Icon -->
+    <link rel="stylesheet" type="text/css" href="assets/css/LineIcons.2.0.css">
+    <!-- Animate -->
+    <link rel="stylesheet" type="text/css" href="assets/css/animate.css">
+    <!-- Tiny Slider  -->
+    <link rel="stylesheet" type="text/css" href="assets/css/tiny-slider.css">
+    <!-- Tailwind css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/tailwind.css">
+
+    <!-- cdn -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+
+    <title>iReview home</title>
+    
+  </head>
+  <body>
+
+
+
+<nav class="flex items-center justify-between flex-wrap bg-blue-600 p-6">
+    <div class="flex items-center flex-shrink-0 text-white mr-6">
+      <!-- <svg class="fill-current h-8 w-8 mr-2" width="54" height="54" viewBox="0 0 54 54" xmlns="http://www.w3.org/2000/svg"><path d="M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z"/></svg> -->
+      <span class="font-semibold text-xl tracking-tight">iReview</span>
+    </div>
+    <div class="block lg:hidden">
+      <button class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
+        <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+      </button>
+    </div>
+    <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+      <div class="text-sm lg:flex-grow">
+        <a href="admin.html" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+          Home 
+        </a>
+        <a href="buss-own.html" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+            Bussiness Owner 
+          </a>
+        <a href="reports.html" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+          Reports
+        </a>
+        <a href="add-cat.html" class="block mt-4 p-1 lg:inline-block lg:mt-0 text-black-200 hover:text-black">
+          Add category
+        </a>        
+      </div>
+      <div>
+        <a href="index.html" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-black hover:bg-white mt-4 lg:mt-0">Logout</a>
+      </div>
+    </div>
+
+  </nav>
+  <!-- search bar  -->
+    <form class="m-10">   
+        <div class="relative">
+            <div class="mb-6">
+                <label for="default-input" class="block mb-2  text-sm font-medium text-gray-900 dark:text-white"></label><h2 class="ml-3">category name</h2>
+                <input type="text" id="default-input" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block ml-3 w-1/2 md:w-4/5 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+            </div>
+            <button type="submit" class="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add</button>
+        </div>
+
+    </form>
+   <!-- list of categories -->
+    <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+        <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+            <caption class="p-5 text-lg font-semibold text-left text-gray-900 bg-white dark:text-white dark:bg-gray-800">
+                List of categories
+                <p class="mt-1 text-sm font-normal text-gray-500 dark:text-gray-400"> A list of all categories available.</p>
+            </caption>
+            <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                <tr>
+                    <th scope="col" class="px-6 py-3">
+                        Category name
+                    </th>
+                    
+                    
+                    <th scope="col" class="px-6 py-3">
+                        <span class="sr-only">Edit</span>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                        Travel
+                    </th>
+                   
+                   
+                    <td class="px-6 py-4 text-right">
+                        <div>
+                            <a href="#.html" class="inline-block text-sm px-4 py-2 leading-none border rounded text-black border-red-700 hover:border-transparent hover:text-black hover:bg-red-100 mt-4 lg:mt-0">Delete</a>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                        Technology
+                    </th>
+                    
+                 
+                    <td class="px-6 py-4 text-right">
+                        <div>
+                            <a href="#.html" class="inline-block text-sm px-4 py-2 leading-none border rounded text-black border-red-700 hover:border-transparent hover:text-black hover:bg-red-100 mt-4 lg:mt-0">Delete</a>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="bg-white dark:bg-gray-800">
+                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                        Food
+                    </th>
+                    
+                    
+                    <td class="px-6 py-4 text-right">
+                        <div>
+                            <a href="#.html" class="inline-block text-sm px-4 py-2 leading-none border rounded text-black border-red-700 hover:border-transparent hover:text-black hover:bg-red-100 mt-4 lg:mt-0">Delete</a>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- All js Here -->
+    <script src="assets/js/wow.js"></script>
+    <script src="assets/js/tiny-slider.js"></script>
+    <script src="assets/js/contact-form.js"></script>      
+    <script src="assets/js/main.js"></script> 
+    
+   
+  </body>
+</html>
