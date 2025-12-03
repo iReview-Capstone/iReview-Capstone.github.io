@@ -9,15 +9,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!--====== Favicon Icon ======-->
-    <link rel="shortcut icon" href="{%  static 'ireview/assets/img/favicon.png' %}" type="image/png">
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/png">
     <!-- Icon -->
-    <link rel="stylesheet" type="text/css" href="{%  static 'ireview/assets/css/LineIcons.2.0.css' %}">
+    <link rel="stylesheet" type="text/css" href="assets/css/LineIcons.2.0.css">
     <!-- Animate -->
-    <link rel="stylesheet" type="text/css" href="{%  static 'ireview/assets/css/animate.css' %}">
+    <link rel="stylesheet" type="text/css" href="assets/css/animate.css">
     <!-- Tiny Slider  -->
-    <link rel="stylesheet" type="text/css" href="{%  static 'ireview/assets/css/tiny-slider.css' %}">
+    <link rel="stylesheet" type="text/css" href="assets/css/tiny-slider.css">
     <!-- Tailwind css -->
-    <link rel="stylesheet" type="text/css" href="{%  static 'ireview/assets/css/tailwind.css' %}">
+    <link rel="stylesheet" type="text/css" href="assets/css/tailwind.css">
 
     <!-- cdn -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -80,19 +80,6 @@
 
               </div>
 
-              {% if user.avatar != 'null_avatar' %}
-              <a href="settings.html">
-                <img class="w-14 h-14 rounded-full" src="{{ user.avatar }}" alt="Rounded avatar">
-              </a>
-              {%else%}
-              <div class="inline-block">
-                <a href="settings.html" class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-blue-700 mr-4">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-person-fill-gear" viewBox="0 0 16 16">
-                    <path d="M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm-9 8c0 1 1 1 1 1h5.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.544-3.393C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4Zm9.886-3.54c.18-.613 1.048-.613 1.229 0l.043.148a.64.64 0 0 0 .921.382l.136-.074c.561-.306 1.175.308.87.869l-.075.136a.64.64 0 0 0 .382.92l.149.045c.612.18.612 1.048 0 1.229l-.15.043a.64.64 0 0 0-.38.921l.074.136c.305.561-.309 1.175-.87.87l-.136-.075a.64.64 0 0 0-.92.382l-.045.149c-.18.612-1.048.612-1.229 0l-.043-.15a.64.64 0 0 0-.921-.38l-.136.074c-.561.305-1.175-.309-.87-.87l.075-.136a.64.64 0 0 0-.382-.92l-.148-.045c-.613-.18-.613-1.048 0-1.229l.148-.043a.64.64 0 0 0 .382-.921l-.074-.136c-.306-.561.308-1.175.869-.87l.136.075a.64.64 0 0 0 .92-.382l.045-.148ZM14 12.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0Z"/>
-                  </svg>
-              </a>
-              </div>
-              {%endif%}
               <div>
                 <a href="/log_out" class="inline-block text-white text-sm px-4 py-2 bg-gray-700 rounded-full leading-none  rounded  hover:border-transparent hover:text-white hover:bg-blue-700 mt-4 lg:mt-0">Logout</a>
               </div>
@@ -271,14 +258,14 @@
 
 
       <!-- script section -->
-      <script src="{% static 'ireview/assets/js/wow.js' %}"></script>
-      <script src="{% static 'ireview/assets/js/tiny-slider.js' %}"></script>
-      <script src="{% static 'ireview/assets/js/contact-form.js' %}"></script>
-      <script src="{% static 'ireview/assets/js/main.js' %}"></script>
+      <script src="{ireview/assets/js/wow.js"></script>
+      <script src="{ireview/assets/js/tiny-slider.js"></script>
+      <script src="ireview/assets/js/contact-form.js"></script>
+      <script src="ireview/assets/js/main.js"></script>
 
       <!-- modals  -->
-      <script src="{% static 'ireview/assets/js/modal.js' %}"></script>
-      <script src="{% static 'ireview/assets/js/modal_post.js' %}"></script>
+      <script src="assets/js/modal.js"></script>
+      <script src="assets/js/modal_post.js"></script>
 
       <!-- end of script section -->
 
