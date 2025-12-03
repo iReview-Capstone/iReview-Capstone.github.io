@@ -1,84 +1,286 @@
 <!DOCTYPE html>
 <html lang="en" style="scroll-behavior: smooth;">
   <head>
+
+    {% load static %}
+
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!--====== Favicon Icon ======-->
-    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/png">
+    <link rel="shortcut icon" href="{%  static 'ireview/assets/img/favicon.png' %}" type="image/png">
     <!-- Icon -->
-    <link rel="stylesheet" type="text/css" href="assets/css/LineIcons.2.0.css">
+    <link rel="stylesheet" type="text/css" href="{%  static 'ireview/assets/css/LineIcons.2.0.css' %}">
     <!-- Animate -->
-    <link rel="stylesheet" type="text/css" href="assets/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="{%  static 'ireview/assets/css/animate.css' %}">
     <!-- Tiny Slider  -->
-    <link rel="stylesheet" type="text/css" href="assets/css/tiny-slider.css">
+    <link rel="stylesheet" type="text/css" href="{%  static 'ireview/assets/css/tiny-slider.css' %}">
     <!-- Tailwind css -->
-    <link rel="stylesheet" type="text/css" href="assets/css/tailwind.css">
+    <link rel="stylesheet" type="text/css" href="{%  static 'ireview/assets/css/tailwind.css' %}">
 
     <!-- cdn -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
 
+    <!-- jQuery  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  
     <title>My Products</title>
 
   </head>
 
   <body>
 
+   <!-- Header Start -->
+    <header id="header-wrap" class="relative">
+
+      
+
+    </header>
+        <!-- Header Area wrapper End -->
+
+        <!-- start of nav bar  -->
+  <section>
+<div class="navigation  items-center bg-white fixed top-0 left-0 w-full z-30 duration-300">
+        <div class="container">
+          <nav class="flex items-center pb-8 justify-between flex-wrap bg-gray-50 rounded-b-[20px] opacity-[0.90] py-2 navbar-expand-lg flex justify-between items-center duration-300p-6">
+            <div class="flex items-center flex-shrink-0 text-white mr-6">
+              <span class="font-semibold text-xl tracking-tight block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-blue-700 mr-4"><img src="{% static 'ireview/assets/img/44.png'  %}" alt="Logo"></span>
+            </div>
+        
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+              <div class="items-center text-sm lg:flex-grow">
+              <ul>
+                <li class="inline-block">
+                <a href="index.html" class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-blue-700 mr-4">
+                  HOME 
+                </a>
+              </li>
+              <li class="inline-block">
+                <a href="add-prod.html" class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-blue-700 mr-4">
+                  ADD PRODUCT 
+                </a>
+              </li>
+                <li class="inline-block">
+                  <a href="my-prod.html" class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-blue-700 mr-4">
+                    MY PRODUCTS
+                  </a>
+                </li>
+                <li class="inline-block">
+                
+                <a href="import-prod.html" class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-blue-700 mr-4">
+                  IMPORT PRODUCT
+                </a>  
+              </li>
+             
+              </ul>
+            
+
+              </div>
+
+              {% if user.avatar != 'null_avatar' %}
+              <a href="settings.html">
+                <img class="w-14 h-14 rounded-full" src="{{ user.avatar }}" alt="Rounded avatar">
+              </a>
+              {%else%}
+              <div class="inline-block">
+                <a href="settings.html" class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-blue-700 mr-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-person-fill-gear" viewBox="0 0 16 16">
+                    <path d="M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm-9 8c0 1 1 1 1 1h5.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.544-3.393C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4Zm9.886-3.54c.18-.613 1.048-.613 1.229 0l.043.148a.64.64 0 0 0 .921.382l.136-.074c.561-.306 1.175.308.87.869l-.075.136a.64.64 0 0 0 .382.92l.149.045c.612.18.612 1.048 0 1.229l-.15.043a.64.64 0 0 0-.38.921l.074.136c.305.561-.309 1.175-.87.87l-.136-.075a.64.64 0 0 0-.92.382l-.045.149c-.18.612-1.048.612-1.229 0l-.043-.15a.64.64 0 0 0-.921-.38l-.136.074c-.561.305-1.175-.309-.87-.87l.075-.136a.64.64 0 0 0-.382-.92l-.148-.045c-.613-.18-.613-1.048 0-1.229l.148-.043a.64.64 0 0 0 .382-.921l-.074-.136c-.306-.561.308-1.175.869-.87l.136.075a.64.64 0 0 0 .92-.382l.045-.148ZM14 12.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0Z"/>
+                  </svg>
+              </a>
+              </div>
+              {%endif%}
+              <div>
+                <a href="/log_out" class="inline-block text-white text-sm px-4 py-2 bg-gray-700 rounded-full leading-none  rounded  hover:border-transparent hover:text-white hover:bg-blue-700 mt-4 lg:mt-0">Logout</a>
+              </div>
+            </div>
+          </nav>
+          </div>
+    </div>
+  </section>
+        <!-- end of nav bar  -->
+
+
       <!-- was Contact Section -->
       <section id="contact" class="py-24">    
-        <div class="container">
+        <div class="container mt-10">
           
   
-          <h2 class="mb-12 text-4xl text-gray-700 font-bold tracking-wide wow fadeInDown" data-wow-delay="0.3s">My Products</h2>
+          <h2 class="pt-20 text-4xl text-gray-700 font-bold tracking-wide wow fadeInDown" data-wow-delay="0.3s">My Products</h2>
         
   
           <div class="flex flex-wrap contact-form-area wow fadeInUp" data-wow-delay="0.4s">          
-            <div class="w-full md:w-1/2">
-              <div class="contact">
-                    <div class="flex flex-col">
 
-                        <!-- item 1 -->
-                        <div class="w-full max-w-sm bg-white rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
-                            <a href="#">
-                                <img class="p-8 rounded-t-lg" src="assets/img/iReview/apple.png" alt="product image" />
+                      {% for prod in products %}  {# got products from context variable in views.py #}
+
+                        <!-- product 1 --> {# add product number in models.py ? #}
+     
+                        <div class="w-full basis-1 mt-10 mr-10 max-w-sm bg-white rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+                          <div class="relative h-32 w-32">
+                         <!-- Button trigger modal -->
+                        <button
+                        class="absolute top-0 left-0 ml-8 bg-gray-100 text-red-500 active:bg-red-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                        type="button" onclick="toggleModal('{{prod.pid}}')">
+                        <!-- Delete  -->
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                        </button>
+                        <!-- Modal -->
+                        <div
+                        class="hidden overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none justify-center items-center"
+                        id="{{prod.pid}}">
+                        <div class="relative w-auto my-6 mx-auto max-w-3xl">
+                          <!--content-->
+                          <div class="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+                            <!--header-->
+                            <div class="flex items-start justify-between p-5 border-b border-solid border-gray-200 rounded-t">
+                              <h3 class="text-3xl font-semibold">
+                                Deleting "{{prod.name}}"
+                              </h3>
+                              <button
+                                class="p-1 ml-auto bg-transparent border-0 text-gray-300 float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
+                                onclick="toggleModal('{{prod.pid}}')">
+                                <span class="bg-transparent h-6 w-6 text-2xl block outline-none focus:outline-none">
+                                  <i class="fas fa-times"></i>
+                                </span>
+                              </button>
+                            </div>
+                            <!--body-->
+                            <div class="relative p-6 flex-auto">
+                                          <!-- </form> -->
+                                          
+                                          <form method="post">
+                                            {% csrf_token %} 
+                                
+                                            <p> Are you sure you want to delete {{prod.name}}?</p>
+                                    
+                              <!--footer-->
+                              <div class="flex items-center justify-end p-6 border-t border-solid border-gray-200 rounded-b">
+                                <button
+                                  class="text-black-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                                  type="button" onclick="toggleModal('{{prod.pid}}')">
+                                  Close
+                                </button>
+                                <input type="hidden" name="type" value="delete">
+                                <input type="hidden" name="pid" value="{{prod.pid}}">
+                                <input type="submit" class="bg-red-500 text-white active:bg-red-600 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" name="submit" id="submit" value="Delete">
+                            
+                              </div>
+                            </form>
+                            <!-- end of form -->
+                          </div>
+                            </div>
+                          </div>
+                          </div>
+                          <div class="hidden opacity-25 fixed inset-0 z-40 bg-black" id="modal-example-regular-backdrop"></div>
+      
+
+                          <!-- end of triggering delete modal -->
+
+                        </div> 
+                            <a href="item/{{prod.pid}}">
+                                <img class="p-8 rounded-t-lg" src=" {{ prod.static_url }} " alt="product image" />
                             </a>
+                            <div class="p-2">
+                              {{prod.name}}
+                            </div>
+
                             <div class="px-5 pb-5">
+                              <!-- product title -->  
                                 <a href="#">
-                                    <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport</h5>
+                                    <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">{{ prod.title }}</h5>
                                 </a>
+
+                                <!-- stars loop and reviews -->
                                 <div class="flex items-center mt-2.5 mb-5">
-                                    <svg aria-hidden="true" class="w-5 h-5 text-yellow-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>First star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                                    <svg aria-hidden="true" class="w-5 h-5 text-yellow-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Second star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                                    <svg aria-hidden="true" class="w-5 h-5 text-yellow-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Third star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                                    <svg aria-hidden="true" class="w-5 h-5 text-yellow-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Fourth star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                  {% for star in "x"|ljust:prod.score %} {# prints the yellow stars #} {# the syntax does the same thing this does "for star in range(int(prod.score))" #}
+
                                     <svg aria-hidden="true" class="w-5 h-5 text-yellow-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Fifth star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                                    <span class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ml-3">5.0</span>
-                                    <span class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ml-1">13.7k reviews</span>
+                                  
+                                    {% endfor %}
+
+                                    <span class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ml-3">{{ prod.score }}</span>
+                                    <span class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ml-1">{{ prod.n_reviews }}</span>
                                 </div>
+
+                                <!-- config import product id -->
                                 <div class="flex items-center">
-                                    <a href="#" class="text-white mr-3 bg-sky-500 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Config</a>
-                                    <a href="#" class="text-white bg-sky-500 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Import</a>
-                                    <div class="ml-3 uppercase font-medium text-xs text-gray-700 mb-1">Product ID : #a23e2s</div>  
+                                    <!-- import button -->
+                                    <div class="text-white bg-sky-500 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                    <form method="post"> {% csrf_token %}
+                                      <input type="hidden" name="type" value="import">
+                                      <input type="hidden" name="id" value="{{prod.pid}}">
+                                      
+                                      <button type="submit" id="modal-open">Import</button>
+                                    </form>
+                                    </div>
+                                    <!-- item page product id -->
+                                <div class="flex items-center">
+                                    <!-- view button -->
+                                    <div class="text-white ml-2 bg-sky-500 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                    <form method="post"> {% csrf_token %}
+                                      <input type="hidden" name="type" value="view">
+                                      <input type="hidden" name="id" value="{{prod.pid}}">
+                                      <a href="item\{{prod.pid}}">View</a>
+                                      <!-- <button type="submit" id="modal-open">View</button> -->
+                                    </form>
+                                    </div>
+
+                                    <!-- config button -->
+                                    <div class="text-white mx-3 bg-sky-500 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                      <form method="post"> {% csrf_token %}
+                                        <input type="hidden" name="type" value="config">
+                                        <input type="hidden" name="id" value="{{prod.pid}}">
+                                        
+                                        <button type="submit" id="modal-open">Config</button>
+                                      </form>
+                                      </div>
+                                      
+                                    <!-- <a href="detail/{{prod.id}}" onclick="modal_open()" class="text-white bg-sky-500 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" id="modal-open">Import</a> -->
+                                    <div class="ml-3 uppercase font-medium text-xs text-gray-700 mb-1">Product ID : #{{ prod.pid }}</div>  
                                 </div>
+
                             </div>
                         </div>
-
-                        <!-- end item 1 -->
-
+                        
+                        <!-- end product section -->
+                        
                     </div>
+                    {% endfor %}
 
-                </form>
               </div>
             </div>
           </div>
         </div> 
       </section>
       <!-- Contact Section End -->
-    
+   
+
+      <script type="text/javascript">
+        function toggleModal(modalID) {
+          document.getElementById(modalID).classList.toggle("hidden");
+          document.getElementById(modalID + "-backdrop").classList.toggle("hidden");
+          document.getElementById(modalID).classList.toggle("flex");
+          document.getElementById(modalID + "-backdrop").classList.toggle("flex");
+        }
+        </script>
 
 
+      <!-- script section -->
+      <script src="{% static 'ireview/assets/js/wow.js' %}"></script>
+      <script src="{% static 'ireview/assets/js/tiny-slider.js' %}"></script>
+      <script src="{% static 'ireview/assets/js/contact-form.js' %}"></script>
+      <script src="{% static 'ireview/assets/js/main.js' %}"></script>
+
+      <!-- modals  -->
+      <script src="{% static 'ireview/assets/js/modal.js' %}"></script>
+      <script src="{% static 'ireview/assets/js/modal_post.js' %}"></script>
+
+      <!-- end of script section -->
 
   </body>
 
